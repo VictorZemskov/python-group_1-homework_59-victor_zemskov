@@ -22,6 +22,9 @@ class Blog extends Component {
             ...joke
         }
       })];
+      if(updatedJokes.length > 4){
+        updatedJokes.shift();
+      }
       updatedJokes.push(newJokes);
       this.setState({jokes: updatedJokes});
     }).catch(error => {
